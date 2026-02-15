@@ -1,5 +1,6 @@
 :root{
-    --theme-color: #141414e5;
+    --theme-color: #303030;
+    --hover-bg: #3f3f3fe5;
 }
 
 @mixin flex-row($gap: 0.5rem){
@@ -29,7 +30,7 @@ div{
 .desktop{
     height: 100%;
     width: 100%;
-    // background-image: url(./Screenshot\ 2026-02-13\ 142204.png);
+    background-image: url(https://images.unsplash.com/photo-1669678435499-67e18dccea2d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,7 +41,7 @@ div{
     // Taskbar
     .taskbar{
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.3rem 0.5rem;
         background-color: var(--theme-color);
         position: absolute;
         z-index: 1;
@@ -59,8 +60,8 @@ div{
             }
             
             .search-bar{
-                height: 2rem;
-                padding: 0rem 1rem;
+                height: 100%;
+                padding: 0rem 0.5rem;
                 padding-bottom: 1px;
                 color: #282828;
                 background-color: white;
@@ -68,7 +69,15 @@ div{
                 overflow: hidden;
                 @include flex-row();
 
+                i{
+                    color: transparent;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    background: conic-gradient(rgb(0, 110, 255),rgb(0, 170, 255),rgb(0, 106, 255),rgb(0, 110, 255));
+                    background-clip: text;
+                }
                 #search-box{
+                    padding: 0.3rem;
                     width: 100%;
                     font-size: 1rem;
                     border: none;
@@ -78,7 +87,7 @@ div{
             }
 
             .task-icons{
-                @include flex-row();
+                @include flex-row(0.1rem);
             }
         }
 
@@ -134,7 +143,7 @@ div{
         position-anchor: --start-menu;
         box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.227);
         display: grid;
-        grid-gap: 2rem 0.5rem;
+        grid-gap: 2rem 0.2rem;
         grid-template-columns: repeat(5,1fr);
         grid-template-rows: auto;
         align-content: flex-start;
@@ -158,7 +167,7 @@ div{
             }
 
             h1{
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 500;
             }
         }
@@ -177,15 +186,16 @@ div{
 }
 
 .icon{
-    height: 2rem;
-    width: 2rem;
-    border-radius: 0.1rem;
-    overflow: hidden;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    // overflow: hidden;
     transition: all 0.2s ease;
     cursor: pointer;
     img{
-        height: 2rem;
-        width: 2rem;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
         object-position: center;
         transition: all 0.5s ease;
@@ -193,7 +203,7 @@ div{
 }
 
 .icon:hover{
-    background-color: white;
+    background-color: var(--hover-bg);
 }
 
 .icon:active img{

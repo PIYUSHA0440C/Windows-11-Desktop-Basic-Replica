@@ -5,7 +5,7 @@ const taskbarRight = document.querySelector('#taskbar-right')
 const startMenu = document.querySelector('#start-menu')
 
 // Start Button
-const startBtnIcon = `./Screenshot 2026-02-13 144455.png`
+const startBtnIcon = `https://img.icons8.com/?size=100&id=TuXN3JNUBGOT&format=png&color=000000`
 startBtn.innerHTML = `<img src="${startBtnIcon}" alt="">`
 
 // Menu list in Menus Box
@@ -51,27 +51,23 @@ menu.forEach(menu => {
 let iconsData = [
     {
         name: 'File Explorer',
-        icon: ''
+        icon: 'https://img.icons8.com/?size=100&id=GzCW12vGkSHM&format=png&color=000000'
     },
     {
         name: 'Chrome',
-        icon: ''
+        icon: 'https://img.icons8.com/?size=100&id=ejub91zEY6Sl&format=png&color=000000'
     },
     {
         name: 'Whatsapp',
-        icon: ''
+        icon: 'https://img.icons8.com/?size=100&id=MW3L3LMSpawR&format=png&color=000000'
     },
     {
         name: 'VS Code',
-        icon: ''
+        icon: 'https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000'
     },
     {
         name: 'Git',
-        icon: ''
-    },
-    {
-        name: 'Git',
-        icon: ''
+        icon: 'https://img.icons8.com/?size=100&id=20906&format=png&color=000000'
     },
 ]
 
